@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Chuck Norris Quotes</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Chuck Norris Quotes</h1>
+            <div class="quote">
+                <p><%=quote %></p>
+            </div>
+            <div class="categories">
+                <h2>Select category:</h2>
+                <ul>
+                    <% categories.forEach((category) => { %>
+                        <li>
+                            <a href="/quote/<%= category %>">
+                                <%= category %>
+                            </a>
+                        </li>
+                    <% }) %> 
+                </ul>
+            </div>
+        </div>
+        <script src="/js/script.js"></script>
+    </body>
+</html>
